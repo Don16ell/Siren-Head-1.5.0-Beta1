@@ -15,7 +15,7 @@ This mod is for 1.16.4. Enjoy!!!!
 '''
 
 [[dependencies.siren_head_mod]]
-    modId="minecraft"
+    modId="forge"
     mandatory=true
     versionRange="[31,]"
     ordering="NONE"
