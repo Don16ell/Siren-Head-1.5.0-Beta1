@@ -37,7 +37,15 @@ public class SirenHeadModMod {
 	public static final String MOD_ID = "siren_head_mod";
 	public SirenHeadModMod() {
 		SirenHeadRegistry.init();
-		MinecraftForge.EVENT_BUS.register(new BowItemModelsProperties());
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
+		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
+	}
+
+	@SuppressWarnings("deprecation")
+	private void setup(final FMLCommonSetupEvent event) {
+		DeferredWorkQueue.runLater(() -> {
+			MinecraftForge.EVENT_BUS.register(new BowItemModelsProperties());
+		});
 	}
 }
+
