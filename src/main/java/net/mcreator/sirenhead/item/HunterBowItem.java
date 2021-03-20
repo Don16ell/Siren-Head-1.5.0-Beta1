@@ -21,7 +21,7 @@ import net.minecraft.world.World;
 
 public class HunterBowItem extends BowItem implements IRangedWeapon {
     private float defaultChargeTime = 20;
-    private float Velocity = 3.0f;
+    private float Velocity = 3.5f;
 
     public HunterBowItem(Item.Properties builder) {
         super(builder);
@@ -52,7 +52,7 @@ public class HunterBowItem extends BowItem implements IRangedWeapon {
                         ArrowItem arrowitem = (ArrowItem)(itemstack.getItem() instanceof ArrowItem ? itemstack.getItem() : Items.ARROW);
                         AbstractArrowEntity abstractarrowentity = arrowitem.createArrow(worldIn, itemstack, playerentity);
                         abstractarrowentity = customArrow(abstractarrowentity);
-                        abstractarrowentity.func_234612_a_(playerentity, playerentity.rotationPitch, playerentity.rotationYaw, 0.0F, f * Velocity, 1.0F);
+                        abstractarrowentity.func_234612_a_(playerentity, playerentity.rotationPitch, playerentity.rotationYaw, 0.0F, f * Velocity, 0.5F);
                         if (f == 1.0F) {
                             abstractarrowentity.setIsCritical(true);
                         }
