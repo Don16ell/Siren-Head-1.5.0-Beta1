@@ -1,0 +1,6 @@
+{
+    "parent": "siren_head_mod:item/hunter_bow",
+    "textures": {
+        "layer0": "siren_head_mod:item/hunter_bow_pulling_2"
+    }
+}
